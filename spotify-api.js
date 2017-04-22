@@ -1,7 +1,16 @@
+var Spotify = require('machinepack-spotify');
 
+// Get access token to use with requests to Spotify Web API.
+Spotify.getAccessToken({
+clientId: 'dc597c350ec3414a8ce0db6feec91e89',
+clientSecret: 'e119cd904c594580a3544225d73bc9de',
+}).exec({
+// An unexpected error occurred.
+error: function (err) {
 
+},
+// OK.
+success: function () {
 
-
-var client_id = 'CLIENT_ID'; // Your client id
-var client_secret = 'CLIENT_SECRET'; // Your secret
-var redirect_uri = 'REDIRECT_URI'; // Your redirect uri
+},
+});
