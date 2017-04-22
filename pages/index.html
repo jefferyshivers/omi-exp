@@ -3,12 +3,10 @@
 
 <head>
 
+
     <script src="https://d3js.org/d3.v4.js"></script>
-    <script language="javascript" type="text/javascript" src="../require.js"></script>
-    <script language="javascript" type="text/javascript" src="../spotify-api.js"></script>
-    <script language="javascript" type="text/javascript" src="../lib/tsne.js"></script>
-    <script language="javascript" type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
-    <script language="javascript" type="text/javascript" src="../nav.js"></script>
+    <script language="javascript" type="text/javascript" src="../lib/p5/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="../maps.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Music Map</title>
+    <title>Songraphy</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Music Map</a>
+                <a class="navbar-brand" href="index.html">Songraphy</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -73,31 +71,31 @@
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>Check out this song!</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Paul Revere</strong>
                                     <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
+                                        <em>Today, 1:30am</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>I had no idea our tastes were so similar :-)</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>John Smith</strong>
+                                    <strong>Benjamin Button</strong>
                                     <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
+                                        <em>Today 9:53am</em>
                                     </span>
                                 </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                                <div>This map is so neat dude. It makes me feel younger!</div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -120,8 +118,8 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">40% Complete</span>
+                                        <strong>John Snow</strong>
+                                        <span class="pull-right text-muted">40% Simlar</span>
                                     </p>
                                     <div class="progress progress-striped active">
                                         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -136,8 +134,8 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">20% Complete</span>
+                                        <strong>Mr. Bluebeard</strong>
+                                        <span class="pull-right text-muted">20% Similar</span>
                                     </p>
                                     <div class="progress progress-striped active">
                                         <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
@@ -152,8 +150,8 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
+                                        <strong>Jonny Appleseed</strong>
+                                        <span class="pull-right text-muted">60% Simlar</span>
                                     </p>
                                     <div class="progress progress-striped active">
                                         <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
@@ -168,8 +166,8 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">80% Complete</span>
+                                        <strong>Benjamin Button</strong>
+                                        <span class="pull-right text-muted">80% Similar</span>
                                     </p>
                                     <div class="progress progress-striped active">
                                         <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
@@ -182,7 +180,7 @@
                         <li class="divider"></li>
                         <li>
                             <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
+                                <strong>See All Friends</strong>
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
@@ -224,16 +222,17 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Something Cool</a>
+                            <iframe src="https://open.spotify.com/embed?uri=spotify:user:spotify:playlist:3rgsDhGHZxZ9sB9DQWQfuf" width="240" height="380" frameborder="0" allowtransparency="true"></iframe>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Maps<span class="fa arrow"></span></a>
+                            <a href="#"><i class="maps-menu" id="men-items"></i> Maps<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Songs</a>
+                                    <a id="men-item-songs" href="#songs">Songs</a>
+
                                 </li>
                                 <li>
-                                    <a href="morris.html">Friends</a>
+                                    <a id="men-item-friends" href="#friends">Friends</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -248,7 +247,10 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Something Cool</h1>
+                    <h1 class="page-header" id="this-page-header">Songraphy</h1>
+
+
+
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -257,9 +259,11 @@
                 <div class="col-lg-8">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Your Personal Map
                             <div class="pull-right">
-                                <div class="btn-group">
+                                <div id="btn-group">
+                                  <img src="../lib/other.png" width="100%" height="auto" >
+
 
                                 </div>
                             </div>
@@ -268,7 +272,7 @@
                         <div class="panel-body">
                             <div id="embed">
 
-                            </div>//the image for
+                            </div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
