@@ -7,10 +7,11 @@ clientSecret: 'e119cd904c594580a3544225d73bc9de',
 }).exec({
 // An unexpected error occurred.
 error: function (err) {
-
+  console.log("no good!!!");
 },
 // OK.
 success: function () {
+  console.log("woohooo!!!");
 
 },
 });
