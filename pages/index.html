@@ -4,6 +4,11 @@
 <head>
 
     <script src="https://d3js.org/d3.v4.js"></script>
+    <script language="javascript" type="text/javascript" src="../require.js"></script>
+    <script language="javascript" type="text/javascript" src="../spotify-api.js"></script>
+    <script language="javascript" type="text/javascript" src="../lib/tsne.js"></script>
+    <script language="javascript" type="text/javascript" src="../lib/jquery-3.1.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../nav.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,7 +43,7 @@
 	</head>
 
 <body>
-
+  <?php include('../getSpotifyAccessToken.php') ?>
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -229,74 +234,6 @@
                                 </li>
                                 <li>
                                     <a href="morris.html">Friends</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-
-
-                        <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Some Dropdown Stuff<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Icons</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grid</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
