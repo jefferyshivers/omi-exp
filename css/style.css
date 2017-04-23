@@ -1,0 +1,392 @@
+
+@font-face {
+  font-family: Satellite;
+  src: url("assets/Satellite.otf") format("opentype");
+}
+
+
+
+
+/*
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 60px;}
+  .sidenav a {font-size: 18px;}
+}
+*/
+
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  background: #ee9999;
+  visiblity:hidden;
+  /*-webkit-box-shadow: inset 6 6 6px rgba(0,0,0,1);*/
+}
+
+
+/*.scroller::-webkit-scrollbar-track {
+    background: white;
+}*/
+#section-text::-webkit-scrollbar-thumb {
+    visibility:hidden;
+}
+#section-text:hover::-webkit-scrollbar-thumb {
+    visibility:visible;
+}
+
+
+
+.site-title {
+  font-size: 12pt;
+  writing-mode: tb-rl;
+  color: rgba(0,0,30,255);;
+  text-align: left;
+  -webkit-transform: rotate(180deg);
+  white-space: nowrap;
+}
+
+
+a {
+  text-decoration: none;
+  color: #818181;
+}
+a:hover {
+  color: rgba(50,200,255,255);
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+bold {
+  -webkit-text-stroke-width: 0.8px;
+}
+
+
+/*#works-list {
+  line-height: 2em;
+}*/
+
+double-space {
+  line-height: 2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+hr{
+  border: none;
+  border-radius: 2px;
+  /*border: #transparent;*/
+  height: 4px;
+  background-color: #ee9999;
+}
+
+
+@keyframes example {
+    from {background-color: #eeeeee;}
+    to {background-color: #transparent;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 300px;
+  min-height: 400px;
+  /*max-height: 100%;*/
+  /*overflow: hidden;*/
+  background: #eeeeee;
+  margin: 0px;
+  padding: 0px;
+  /*font-family: "Satellite";*/
+  font-family: "Raleway";
+}
+
+
+header,
+leftnav,
+section,
+aside,
+footer {
+  /*margin: 0 1.5% 24px 1.5%;*/
+  margin: 0px;
+  padding: 0px;
+}
+header, footer {
+  height: 50px;
+  letter-spacing: 2px;
+  width: 100%;
+  margin: 0;
+  /*background: #bcddee;*/
+  background: #90d0e9;
+  animation-name: example;
+  animation-duration: 2s;
+}
+header {
+  clear: both;
+  margin-top: 0;
+}
+footer {
+  clear: both;
+  margin-bottom: 0;
+
+}
+#header-title {
+  color: white;
+  /*background: green;*/
+  text-shadow: 2px 2px 2px #aaeeee;
+  align: middle;
+  height: 48px;
+}
+#header-title-text {
+  transform: translate(0%, 20%);
+  /*background: red;*/
+  text-align: center;
+  font-size: 22pt;
+  margin-left: calc((100% - 300px) / 2);
+  margin-right: auto;
+  width: 300px;
+  position: absolute;
+  list-style: none;
+  z-index: 2;
+}
+#header-title-text ul{
+  text-align: center;
+}
+#header-title-text li {
+  font-size: 10pt;
+  /*float: center;*/
+  letter-spacing: 2px;
+  /*text-align: left;*/
+  display: inline-block;
+}
+#header-title-text li-icon{
+  top: -5px;
+  /*float: right;*/
+  height: 50px;
+  /*text-align: right;*/
+}
+
+
+
+#footer-menu {
+  float: left;
+  /*background: green;*/
+  width: 100%;
+  height: 48px;
+  align: center;
+  overflow: hidden;
+}
+
+#footer-menu-text {
+  position: absolute;
+  /*background: red;*/
+  display: table;
+  width: 300px;
+  font-size: 14pt;
+  margin-left: calc((100% - 300px) / 2);
+  margin-right: auto;
+  list-style: none;
+  transform: translate(0%, 60%);
+  z-index: 2;
+}
+
+#footer-menu-text li{
+  color: white;
+  /*margin: auto;
+  left: 0; right: 0; top: 0; bottom: 0;*/
+  /*margin: 0;*/
+  padding: 0.5em;
+  display: inline;
+}
+footer ul {
+  display: table;
+  margin: 0 auto;
+}
+footer ul a{
+  color: white;
+}
+footer ul a:hover{
+  color: white;
+  text-shadow: 2px 2px 0px #ee9999;
+}
+
+
+
+
+#footer-colophon {
+  float: left;
+  width: calc(150px + ((100% - 900px) / 2));
+  height: 48px;
+}
+#footer-colophon-text {
+  color: white;
+  font-size: 12pt;
+  align: left;
+  text-align: left;
+  transform: translate(0%, 80%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+#section-content-space {
+  float: left;
+  background: white;
+  width: 100%;
+  height: 100%;
+  align: center;
+  overflow: hidden;
+}
+
+#section-content-item {
+  position: absolute;
+  background: white;
+  border: 3px dotted blue;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+#section-text {
+  width: 600px;
+  height: 100%;
+  /*align: center;*/
+  /*float: middle;*/
+  /*margin: 0;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  background: blue;
+}
+
+
+h1{
+  text-align: center;
+}
+h2{
+  font-size: 12pt;
+  text-align: center;
+}
+.subsection{
+  background: white;
+  margin: 0;
+  clear: both;
+  /*padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The side navigation menu */
+.sidenav {
+    /*height: 100%; */
+    height: calc(100% - 160px);
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 50px;
+    left: 0;
+    background-color: #ee9999;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
