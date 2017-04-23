@@ -16,14 +16,33 @@
 
 
 <script language="javascript" type="text/javascript">
-  // Set the width of the side navigation to 250px
-  function openNav() {
+  var menuOpenClose = 0;
+
+  function toggleNav() {
+    if (menuOpenClose === 0) {
+      // open the menu
       document.getElementById("mySidenav").style.width = "250px";
-  }
-  // Set the width of the side navigation to 0
-  function closeNav() {
+      document.getElementById("mySidenavR").style.width = "350px";
+      menuOpenClose = 1;
+    } else {
+      // close the menu
       document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("mySidenavR").style.width = "0";
+      menuOpenClose = 0;
+    }
   }
+
+  // // Set the width of the side navigation to 250px
+  // function openNav() {
+  //
+  //     document.getElementById("mySidenav").style.width = "250px";
+  //     document.getElementById("mySidenavR").style.width = "350px";
+  // }
+  // // Set the width of the side navigation to 0
+  // function closeNav() {
+  //     document.getElementById("mySidenav").style.width = "0";
+  //     document.getElementById("mySidenav").style.width = "0";
+  // }
 </script>
 
 
@@ -32,9 +51,9 @@
 <header>
   <title>songraphy</title>
   <div id="header-title">
-    <div id="header-title-text">
-      <span onclick="openNav()">songraphy</span>
-    </div>
+    <a href="#" id="header-title-text" onclick="toggleNav()">
+      songraphy
+    </a>
   </div>
 </header>
 
@@ -42,7 +61,7 @@
 
 
 <div id="mySidenav" class="sidenav">
-  <a id="sidebutton" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- <a id="sidebutton" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
   <a>stats</a>
   <hr>
   <a>
@@ -59,7 +78,6 @@
     <br>
     - hello
   </a>
-
 </div>
 
 
@@ -76,6 +94,35 @@
     </div>
   </div>
 </section>
+
+
+
+
+<div id="mySidenavR" class="sidenavR">
+  <a>other info, maybe some graphs, recent activity, etc</a>
+  <hr>
+  <a>
+    something
+    <br>
+    - list
+    <br>
+    - here
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+</div>
+
+
+
+
+
+
+
 
 <footer>
   <div id="footer-menu">
