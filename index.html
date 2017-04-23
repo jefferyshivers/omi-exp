@@ -17,12 +17,13 @@
 
 <script language="javascript" type="text/javascript">
   var menuOpenClose = 0;
-
   function toggleNav() {
     if (menuOpenClose === 0) {
       // open the menu
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("mySidenavR").style.width = "350px";
+      document.getElementById("mySidenav").style.width = "calc(50% - 1px)";
+      // document.getElementById("mySidenav").style.minWidth = "150px";
+      document.getElementById("mySidenavR").style.width = "calc(50% - 1px)";
+      // document.getElementById("mySidenavR").style.minWidth = "150px";
       menuOpenClose = 1;
     } else {
       // close the menu
@@ -31,18 +32,6 @@
       menuOpenClose = 0;
     }
   }
-
-  // // Set the width of the side navigation to 250px
-  // function openNav() {
-  //
-  //     document.getElementById("mySidenav").style.width = "250px";
-  //     document.getElementById("mySidenavR").style.width = "350px";
-  // }
-  // // Set the width of the side navigation to 0
-  // function closeNav() {
-  //     document.getElementById("mySidenav").style.width = "0";
-  //     document.getElementById("mySidenav").style.width = "0";
-  // }
 </script>
 
 
@@ -62,6 +51,7 @@
 
 <div id="mySidenav" class="sidenav">
   <!-- <a id="sidebutton" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+  <br>
   <a>stats</a>
   <hr>
   <a>
@@ -73,6 +63,34 @@
   </a>
   <a>
     another thing
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
     <br>
     - hi there
     <br>
@@ -99,6 +117,7 @@
 
 
 <div id="mySidenavR" class="sidenavR">
+  <br>
   <a>other info, maybe some graphs, recent activity, etc</a>
   <hr>
   <a>
@@ -107,6 +126,34 @@
     - list
     <br>
     - here
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
+  </a>
+  <a>
+    another list
+    <br>
+    - hi there
+    <br>
+    - hello
   </a>
   <a>
     another list

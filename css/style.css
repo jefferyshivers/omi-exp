@@ -7,13 +7,6 @@
 
 
 
-/*
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 60px;}
-  .sidenav a {font-size: 18px;}
-}
-*/
-
 
 
 ::-webkit-scrollbar {
@@ -24,13 +17,9 @@
   -webkit-border-radius: 2px;
   background: #ee9999;
   visiblity:hidden;
-  /*-webkit-box-shadow: inset 6 6 6px rgba(0,0,0,1);*/
 }
 
 
-/*.scroller::-webkit-scrollbar-track {
-    background: white;
-}*/
 #section-text::-webkit-scrollbar-thumb {
     visibility:hidden;
 }
@@ -75,18 +64,10 @@ bold {
 }
 
 
-/*#works-list {
-  line-height: 2em;
-}*/
 
 double-space {
   line-height: 2em;
 }
-
-
-
-
-
 
 
 
@@ -111,29 +92,15 @@ hr{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 html,
 body {
   height: 100%;
   width: 100%;
   min-width: 300px;
   min-height: 400px;
-  /*max-height: 100%;*/
-  /*overflow: hidden;*/
   background: #eeeeee;
   margin: 0px;
   padding: 0px;
-  /*font-family: "Satellite";*/
   font-family: "Raleway";
 }
 
@@ -143,39 +110,44 @@ leftnav,
 section,
 aside,
 footer {
-  /*margin: 0 1.5% 24px 1.5%;*/
   margin: 0px;
   padding: 0px;
 }
 header, footer {
+  z-index: 2;
   height: 50px;
   letter-spacing: 2px;
   width: 100%;
   margin: 0;
-  /*background: #bcddee;*/
   background: #90d0e9;
   animation-name: example;
   animation-duration: 2s;
 }
 header {
   clear: both;
+  position: fixed;
   margin-top: 0;
 }
 footer {
   clear: both;
+  position: fixed;
+  bottom: 0;
+  float: left;
   margin-bottom: 0;
 }
 #header-title {
   color: white;
-  /*background: green;*/
   text-shadow: 2px 2px 2px #aaeeee;
   align: middle;
   height: 48px;
 }
+#header-title a:hover {
+  text-shadow: 2px 2px 0px #ee9999;
+}
+
 #header-title-text {
   transform: translate(0%, 15%);
   color: white;
-  /*background: red;*/
   text-align: center;
   font-size: 22pt;
   margin-left: calc((100% - 300px) / 2);
@@ -183,30 +155,24 @@ footer {
   width: 300px;
   position: absolute;
   list-style: none;
-  z-index: 2;
 }
 #header-title-text ul{
   text-align: center;
 }
 #header-title-text li {
   font-size: 10pt;
-  /*float: center;*/
   letter-spacing: 2px;
-  /*text-align: left;*/
   display: inline-block;
 }
 #header-title-text li-icon{
   top: -5px;
-  /*float: right;*/
   height: 50px;
-  /*text-align: right;*/
 }
 
 
 
 #footer-menu {
   float: left;
-  /*background: green;*/
   width: 100%;
   height: 48px;
   align: center;
@@ -215,7 +181,6 @@ footer {
 
 #footer-menu-text {
   position: absolute;
-  /*background: red;*/
   display: table;
   width: 300px;
   font-size: 14pt;
@@ -223,14 +188,10 @@ footer {
   margin-right: auto;
   list-style: none;
   transform: translate(0%, 60%);
-  z-index: 2;
 }
 
 #footer-menu-text li{
   color: white;
-  /*margin: auto;
-  left: 0; right: 0; top: 0; bottom: 0;*/
-  /*margin: 0;*/
   padding: 0.5em;
   display: inline;
 }
@@ -276,15 +237,20 @@ footer ul a:hover{
 
 
 section {
+  clear: both;
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: calc(100% - 100px);
+  height: 100%;
 }
 
 #section-content-space {
-  float: left;
+  position: absolute;
+  top: 50px;
+  float: top;
   background: white;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 100px);
   align: center;
   overflow: hidden;
 }
@@ -354,8 +320,9 @@ hr {
 /* The side navigation menu */
 .sidenav {
     /*height: 100%; */
-    height: calc(100% - 160px);
-    min-height: 240px;
+    height: calc(100% - 100px);
+    min-height: 300px;
+    /*min-width: 0;*/
     width: 0; /* 0 width - change this with JavaScript */
     clear: both;
     position: fixed; /* Stay in place */
@@ -364,7 +331,7 @@ hr {
     left: 0;
     background-color: rgba(253, 138, 138, 0.8);
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    /*padding-top: 0px;*/
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
@@ -416,8 +383,9 @@ hr {
 /* The side navigation menu */
 .sidenavR {
     /*height: 100%; */
-    height: calc(100% - 160px);
-    min-height: 240px;
+    height: calc(100% - 100px);
+    min-height: 300px;
+    /*min-width: 0;*/
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed;
     clear: both;
@@ -427,7 +395,8 @@ hr {
     right: 0;
     background-color: rgba(253, 138, 138, 0.8);
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    overflow-y: scroll;
+    /*padding-top: 0px;*/
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
