@@ -5,7 +5,7 @@
 **TEAM:**
 - Jason Choi
 - Jonathan Koh
-- Soma Laotadoke
+- Soma Laotodoke
 - Jeffery Shivers
 - Sam Stowe
 
