@@ -8,33 +8,13 @@
   <meta name="author" content="The Songraphy Team">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png"> -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 
 <body>
 
 
-<script language="javascript" type="text/javascript">
-  var menuOpenClose = 0;
-  function toggleNav() {
-    if (menuOpenClose === 0) {
-      // open the menu
-      document.getElementById("mySidenav").style.width = "calc(50% - 1px)";
-      // document.getElementById("mySidenav").style.minWidth = "150px";
-      document.getElementById("mySidenavR").style.width = "calc(50% - 1px)";
-      // document.getElementById("mySidenavR").style.minWidth = "150px";
-      menuOpenClose = 1;
-    } else {
-      // close the menu
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("mySidenavR").style.width = "0";
-      menuOpenClose = 0;
-    }
-  }
-</script>
-
-
+<script language="javascript" type="text/javascript" src="js/nav.js"></script>
 
 
 <header>
@@ -47,9 +27,7 @@
 </header>
 
 
-
-
-<div id="mySidenav" class="sidenav">
+<div id="leftnav" class="sidenavL">
   <br>
   <a>stats</a>
   <hr>
@@ -60,63 +38,17 @@
     <br>
     - hi
   </a>
-  <a>
-    another thing
-    <br>
-    - hi there
-    <br>
-    - hello
-  </a>
-  <a>
-    another list
-    <br>
-    - hi there
-    <br>
-    - hello
-  </a>
-  <a>
-    another list
-    <br>
-    - hi there
-    <br>
-    - hello
-  </a>
-  <a>
-    another list
-    <br>
-    - hi there
-    <br>
-    - hello
-  </a>
-  <a>
-    another list
-    <br>
-    - hi there
-    <br>
-    - hello
-  </a>
 </div>
-
-
 
 
 <section>
   <div id="section-content-space">
-    <div id="section-content-item">
-      <img src="assets/Kitten-PNG-HD.png" width=100% height=100%>
-      <!-- <div class="subsection" id="about"></div>
-      <div class="subsection" id="cv"></div>
-      <div class="subsection" id="hire"></div>
-      <div class="subsection" id="contact"></div>
-      <div class="subsection" id="colophon"></div> -->
-    </div>
+    <!-- <img src="assets/Kitten-PNG-HD.png" height="auto" width="100%"> -->
   </div>
 </section>
 
 
-
-
-<div id="mySidenavR" class="sidenavR">
+<div id="rightnav" class="sidenavR">
   <br>
   <a>other info, maybe some graphs, recent activity, etc</a>
   <hr>
@@ -165,27 +97,55 @@
 </div>
 
 
+<div id="bottom-about">
+  <br>
+  <a>about</a>
+  <hr>
+  <a>
+    something
+    <br>
+    - list
+    <br>
+    - here
+  </a>
+</div>
 
+<div id="bottom-code">
+  <br>
+  <a>code</a>
+  <hr>
+  <a>
+    something
+    <br>
+    - list
+    <br>
+    - here
+  </a>
+</div>
 
-
-
-
+<div id="bottom-docs">
+  <br>
+  <a>doc</a>
+  <hr>
+  <a>
+    something
+    <br>
+    - list
+    <br>
+    - here
+  </a>
+</div>
 
 <footer>
   <div id="footer-menu">
     <div id ="footer-menu-text">
       <ul>
-        <li><a href="#about">about</a></li>
-        <li><a href="#cv">code</a></li>
-        <li><a href="#contact">docs</a></li>
+        <li><a href="#about" onclick="toggleAbout()">about</a></li>
+        <li><a href="#code" onclick="toggleCode()">code</a></li>
+        <li><a href="#docs" onclick="toggleDocs()">docs</a></li>
       </ul>
     </div>
   </div>
-  <!-- <div id="footer-colophon">
-    <div id="footer-colophon-text">
-      colophon
-    </div>
-  </div> -->
 </footer>
 
 </body>

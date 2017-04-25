@@ -10,11 +10,11 @@
 
 
 ::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 0px;
+  height: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 2px;
+  -webkit-border-radius: 0px;
   background: #ee9999;
   visiblity:hidden;
 }
@@ -74,13 +74,6 @@ double-space {
 
 
 
-hr{
-  border: none;
-  border-radius: 2px;
-  /*border: #transparent;*/
-  height: 4px;
-  background-color: #ee9999;
-}
 
 
 @keyframes example {
@@ -228,14 +221,6 @@ footer ul a:hover{
 
 
 
-
-
-
-
-
-
-
-
 section {
   clear: both;
   position: fixed;
@@ -258,7 +243,6 @@ section {
 #section-content-item {
   position: absolute;
   background: transparent;
-  /*border: 3px dotted blue;*/
   width: 300px;
   height: 300px;
   margin: auto;
@@ -269,11 +253,6 @@ section {
 #section-text {
   width: 600px;
   height: 100%;
-  /*align: center;*/
-  /*float: middle;*/
-  /*margin: 0;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
   background: blue;
 }
 
@@ -289,15 +268,7 @@ h2{
   background: white;
   margin: 0;
   clear: both;
-  /*padding: 10px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 20px;*/
 }
-
-
-
-
 
 
 
@@ -306,46 +277,35 @@ h2{
 
 hr {
   width: 100%;
-  background-color: rgba(210,210,210,255);
-  border-color: transparent;
+  height: 4px;
+  border: none;
+  background-color: rgba(200, 100, 100, 1);
 }
 
 
-
-
-
-
-
-
-/* The side navigation menu */
-.sidenav {
-    /*height: 100%; */
+.sidenavL {
     height: calc(100% - 100px);
     min-height: 300px;
-    /*min-width: 0;*/
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0;
     clear: both;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    position: fixed;
+    z-index: 1;
     top: 50px;
     left: 0;
-    background-color: rgba(253, 138, 138, 0.8);
-    overflow-x: hidden; /* Disable horizontal scroll */
-    /*padding-top: 0px;*/
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: rgba(253, 138, 138, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-right: 1px solid rgba(144, 208, 233, 1);
 }
 
-/* The navigation menu links */
-.sidenav a {
+.sidenavL a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16pt;
     color: white;
     display: block;
-    /*transition: 0.3s*/
 }
 
-/* When you mouse over the navigation links, change their color */
 /*.sidenav a:hover, .offcanvas a:focus{
     color: white;
     text-shadow: 2px 2px 0px #90d0e9;
@@ -356,17 +316,13 @@ hr {
 }
 
 
-
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+/*.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 15px;
     font-size: 36px;
     margin-left: 50px;
-}
-
+}*/
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 /*@media screen and (max-height: 450px) {
@@ -382,35 +338,131 @@ hr {
 
 /* The side navigation menu */
 .sidenavR {
-    /*height: 100%; */
     height: calc(100% - 100px);
     min-height: 300px;
-    /*min-width: 0;*/
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 0;
     position: fixed;
     clear: both;
     float: right;
     z-index: 1; /* Stay on top */
     top: 50px;
     right: 0;
-    background-color: rgba(253, 138, 138, 0.8);
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: rgba(253, 138, 138, 0.95);
+    overflow-x: hidden;
     overflow-y: scroll;
-    /*padding-top: 0px;*/
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transition: 0.5s;
+    border-left: 1px solid rgba(144, 208, 233, 1);
 }
 
-/* The navigation menu links */
 .sidenavR a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16pt;
     color: white;
     display: block;
-    /*transition: 0.3s*/
 }
 
 #sidebuttonR:hover, .offcanvas #sidebuttonR:focus{
     color: white;
     text-shadow: 2px 2px 0px #90d0e9;
+}
+
+
+
+
+
+
+
+
+/* The side navigation menu */
+#bottom-about {
+    height: 0;
+    width: 250px;
+    position: fixed;
+    clear: both;
+    float: left;
+    bottom: 45px;
+    z-index: 1; /* Stay on top */
+    left: calc(50% - 125px);
+    background-color: rgba(253, 138, 138, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    border-color: rgba(253, 138, 138, 1);
+    border-radius: 5px;
+    border-left: 5px solid rgba(200, 100, 100, 1);
+    border-right: 5px solid rgba(200, 100, 100, 1);
+    border-top: 5px solid rgba(200, 100, 100, 1);
+}
+
+#bottom-about a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16pt;
+    color: white;
+    display: block;
+}
+
+
+
+
+
+/* The side navigation menu */
+#bottom-code {
+    height: 0;
+    width: 250px;
+    position: fixed;
+    clear: both;
+    float: left;
+    bottom: 45px;
+    z-index: 1; /* Stay on top */
+    left: calc(50% - 125px);
+    background-color: rgba(253, 138, 138, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    border-color: rgba(253, 138, 138, 1);
+    border-radius: 5px;
+    border-left: 5px solid rgba(200, 100, 100, 1);
+    border-right: 5px solid rgba(200, 100, 100, 1);
+    border-top: 5px solid rgba(200, 100, 100, 1);
+}
+
+#bottom-code a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16pt;
+    color: white;
+    display: block;
+}
+
+
+
+/* The side navigation menu */
+#bottom-docs {
+    height: 0;
+    width: 250px;
+    position: fixed;
+    clear: both;
+    float: left;
+    bottom: 45px;
+    z-index: 1; /* Stay on top */
+    left: calc(50% - 125px);
+    background-color: rgba(253, 138, 138, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: 0.5s;
+    border-color: rgba(253, 138, 138, 1);
+    border-radius: 5px;
+    border-left: 5px solid rgba(200, 100, 100, 1);
+    border-right: 5px solid rgba(200, 100, 100, 1);
+    border-top: 5px solid rgba(200, 100, 100, 1);
+}
+
+#bottom-docs a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 16pt;
+    color: white;
+    display: block;
 }
