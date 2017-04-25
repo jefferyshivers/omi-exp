@@ -249,13 +249,11 @@ section {
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-
 #section-text {
   width: 600px;
   height: 100%;
   background: blue;
 }
-
 
 h1{
   text-align: center;
@@ -281,7 +279,6 @@ hr {
   border: none;
   background-color: rgba(200, 100, 100, 1);
 }
-
 
 .sidenavL {
     height: calc(100% - 100px);
